@@ -1,6 +1,6 @@
 ---
 title: "DATA607 Tidyverse: dplyr"
-author: "Ryan Gordon"
+author: "Ryan Gordon edits by Anthony Munoz"
 date: "April 30, 2019"
 output: 
   html_document:
@@ -162,4 +162,25 @@ top <- function(t, x){
   t %>% arrange(desc(age)) %>% head(x)
 }
 heart %>% group_by(age) %>% do(top(., x))
+```
+
+
+### extends by Anthony Munoz
+
+### Graph
+
+```{r}
+#grouping by sex,age count 
+sex.count <- heart %>% group_by(sex) %>% summarise(total = n()) 
+age.count <- heart %>% group_by(age) %>% summarise(total = n()) 
+
+gplot <- ggplot(age.count, aes(x=age, y=total)) + geom_bar(stat = "identity") 
+ 
+gplot
+
+gplot2 <- ggplot(sex.count, aes(x=sex, y=total)) + geom_bar(stat = "identity") 
+ 
+gplot2
+
+
 ```
