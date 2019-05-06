@@ -1,0 +1,74 @@
+---
+title: "Anthony_Tidyverse"
+author: "Anthony Munoz"
+date: "5/5/2019"
+output: html_document
+---
+
+
+
+## Introduction 
+
+Data 607 Assigment 
+Tidyverse package.
+I will be choosing the following libraries from tydiverse
+ggplot
+dplyr
+tidyr
+readr
+
+The data for this assignment was download from https://www.kaggle.com/gregorut/videogamesales
+
+
+```{r warning=FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(readr)
+```
+
+## Data loading
+
+#read_csv()
+use the function to read a csv file into a varible 
+```{r}
+
+vg.data <- read_csv("vgsales.csv")
+
+
+```
+
+
+## data wrangling with tydeverse libraries tidyr and dplyer
+
+
+on this part i will be working with tidyr and dplyer libraries in order to split/organize/summarize the data
+
+# select()
+# summarise()
+#group_by()
+```{r}
+
+data.north.america <- vg.data %>% select(Name,Platform,Year,Genre,Publisher,NA_Sales) 
+data.EU <- vg.data %>% select(Name,Platform,Year,Genre,Publisher,EU_Sales) 
+data.JP <- vg.data %>% select(Name,Platform,Year,Genre,Publisher,JP_Sales) 
+
+
+
+genre.total.category <- vg.data %>% group_by(Genre) %>% summarise(total = n())
+head(genre.total.category)
+
+```
+## Graph ggplot
+
+
+```{r}
+# graph showing the Genre game by total count on a bar plot
+gplot <- ggplot(genre.total.category, aes(x=Genre, y=total)) + geom_bar(stat = "identity")
+
+gplot
+
+
+
+
+```
