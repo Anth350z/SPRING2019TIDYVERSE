@@ -26,6 +26,13 @@ In this assignment, you’ll practice collaborating around a code project with G
 ### Part 2: https://github.com/dapolloxp/SPRING2019TIDYVERSE-1/blob/master/perez_tidyverse_lubridate.Rmd
 ## ggplot2
 
+
+### Anthony Munoz
+## part 1 select(), summarise(), ggplot()
+https://github.com/Anth350z/SPRING2019TIDYVERSE/blob/master/Anthony_Tidyverse.Rmd
+## part 2
+https://github.com/Anth350z/SPRING2019TIDYVERSE/blob/master/Ryan_Gordon_dplyr_edits.Rmd
+
 ### Samantha Deokinanan
 
 My aim is to demonstrate how tidyverse's `ggplot2` can create basic and advanced visualizations that can capture valuable information, and provide a clear, analytical representation of the data in an easily understandable way. For the second part, I expanded on [Jimmy Ng's](https://github.com/myvioletrose/SPRING2019TIDYVERSE/blob/master/tidyverse_recipe_case_when_JN.Rmd) tidyverse recipe as I have never used `dplyr::case_when`, and thought `dplyr::if_else` and `dplyr::recode` could produced the same outputs. 
